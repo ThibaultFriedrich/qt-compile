@@ -10,6 +10,7 @@ process.env.JOM_PATH = 'C:\\Qt\\Qt5.4.1\\Tools\\QtCreator\\bin'
 process.env.VCVARSALL_PATH = 'C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC';
 
 describe('compile', function () {
+    this.timeout(10000);
     describe('hello-world', function () {
 
         it('absolute path src', function (done) {
