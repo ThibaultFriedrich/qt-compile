@@ -48,6 +48,9 @@ module.exports = function (opts, callback) {
                     callback && callback(err);
                     return;
                 }
+                if (opts.verbose) {
+                    console.log('jom done');
+                }
 
                 callback && callback(null);
                 /*

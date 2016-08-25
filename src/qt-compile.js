@@ -53,6 +53,9 @@ module.exports = function (opts, callback) {
 
     if (opts.clean) {
         fs.emptyDirSync(opts.dest);
+        if (opts.verbose) {
+            console.log('cleaning build directory done');
+        }
     } else {
         fs.ensureDirSync(opts.dest);
     }
@@ -61,6 +64,9 @@ module.exports = function (opts, callback) {
 
 
     if ('win32' === os.platform()) {
+        if (opts.verbose) {
+            console.log('os detection done: windows');
+        }
         windowsQtCompile(opts, function (err, execname) {
             process.chdir(previousCwd);
             callback && callback(err, execname);
