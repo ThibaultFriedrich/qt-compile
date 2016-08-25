@@ -22,7 +22,7 @@ Setup the environment variables for MSVC 2010
 
 ```javascript
 
-var qtCompile = require('qt-compilet');
+var qtCompile = require('qt-compile');
 
 
 qtCompile({
@@ -32,8 +32,8 @@ qtCompile({
     verbose: false, // default false
     src: <path file .pro>,
     dest: <path of the exec, // default '.'
-}, function (err) {
-    
+}, function (err, execname) {
+    // execname = absolute filename of the executable generated
 });
 
 
