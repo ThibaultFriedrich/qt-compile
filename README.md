@@ -32,8 +32,8 @@ qtCompile({
     verbose: false, // default false
     src: <path file .pro>,
     dest: <path of the exec, // default '.'
-}, function (err, execname) {
-    // execname = absolute filename of the executable generated
+}, function (err) {
+
 });
 
 

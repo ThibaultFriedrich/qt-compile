@@ -35,6 +35,9 @@ module.exports = function (opts, callback) {
                 callback && callback(err);
                 return;
             }
+            if (opts.verbose) {
+                console.log('qmake done');
+            }
 
             var new_env = util._extend(process.env, {LANG: "en"});
             var vcvarsall = path.join(process.env.VCVARSALL_PATH, 'vcvarsall.bat');
@@ -46,6 +49,9 @@ module.exports = function (opts, callback) {
                     return;
                 }
 
+                callback && callback(null);
+                /*
+
                 findExecname(opts.src, function (err, execname) {
                     if (err) {
                         callback && callback(err);
@@ -53,7 +59,7 @@ module.exports = function (opts, callback) {
                         var execname = path.join(opts.dest, (opts.debug?'debug':'release'), execname)+'.exe';
                         callback && callback(null, execname);
                     }
-                })
+                })*/
             });
 
     });
