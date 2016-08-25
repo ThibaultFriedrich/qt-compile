@@ -1,0 +1,32 @@
+{
+  "name": "qt-compile",
+  "version": "0.1.0",
+  "description": "Module to easily compile qt from nodejs ",
+  "main": "src/qt-compile.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "mocha test/test*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThibaultFriedrich/qt-compile.git"
+  },
+  "keywords": [
+    "qt",
+    "compilation"
+  ],
+  "author": "Thibault Friedrich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThibaultFriedrich/qt-compile/issues"
+  },
+  "homepage": "https://github.com/ThibaultFriedrich/qt-compile#readme",
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "chai": "^3.5.0",
+    "fs-extra": "^0.30.0",
+    "mocha": "^3.0.2"
+  }
+}
