@@ -63,9 +63,9 @@ module.exports = function (opts, callback) {
     if ('win32' === os.platform()) {
         windowsQtCompile(opts, function (err, execname) {
             process.chdir(previousCwd);
-            callback(err, execname);
+            callback && callback(err, execname);
         });
     } else {
-        console.error(new Error('The os '+os.platform()+' is not managed for now.'));
+        callback && callback(new Error('The os '+os.platform()+' is not managed for now.'));
     }
 };

@@ -47,7 +47,6 @@ module.exports = function (opts, callback) {
                 }
 
                 findExecname(opts.src, function (err, execname) {
-
                     if (err) {
                         callback && callback(err);
                     } else {
